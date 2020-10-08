@@ -1,9 +1,10 @@
-from flask import Flask
-app = Flask(__name__)
-
-@app.route('/')
-def hello_world():
-    return 'Nimish bhaiya OP'
-
-if __name__ == '__main__':
-    app.run()
+from flask import Flask, jsonify,request
+import time
+app = Flask(__name__);
+@app.route("/bot", methods=["POST"])
+def response():
+    query = dict(request.form)['query']
+    res = query + " " + time.ctime()
+    return jsonify({"response" : res})
+if __name__=="__main__":
+    app.run(host="0.0.0.0",)
