@@ -4,7 +4,7 @@ import time
 def check(query):
     if query=='Howareyou?':
         res="I'm good"
-    if query=='Hello'or query=='Hi'or query=='What is corona?'or query=='What is corona':
+    if query=='Hello'or query=='Hi'or query=="What is corona'?'"or query=='What is corona':
         res="I'm good"
     if query=="What is coronavirus?" or query=="What is a coronavirus?" or query=="What is corona?":
         res="Coronaviruses are a large family of viruses which may cause illness in animals or humans.  In humans, several coronaviruses are known to cause respiratory infections ranging from the common cold to more severe diseases such as Middle East Respiratory Syndrome (MERS) and Severe Acute Respiratory Syndrome (SARS). The most recently discovered coronavirus causes coronavirus disease COVID-19."
