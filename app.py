@@ -2,7 +2,7 @@ from flask import Flask, jsonify,request
 import time
 
 def check(query):
-    if query=="How are you?":
+    if query=='Howareyou?':
         res="I'm good"
     if query=='Hello'or query=='Hi':
         res="Hey there!"
