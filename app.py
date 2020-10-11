@@ -1,18 +1,20 @@
 from flask import Flask, jsonify,request
 import time
-greetings = ("hi", "hello", "hey","what is your name","what's your name","who are you")
-bye=("bye","goodbye","i am leaving","see you")
-question=("what","how","which","Tell me about")
-corona=("virus","coronavirus","covid-19","covid19","covid 19","corona","covid")
-#covid=("covid-19","covid19","covid 19")
-prevent=("protect","prevent","stop","avoid","precautions","precaution","prevention")
-spread=("spread","spreading","cause","causes")
-catch=("catch","catching","caught")
-health=("are you","is your health")
-welcome=("welcome","my pleasure")
-maker=("who made you","who developed you","who is your owner","who coded you")
-symptoms=("symptoms","symptom","sign","signs")
-def check(query):    
+def check(query):
+    query=query.lower()
+    greetings = ("hi", "hello", "hey","what is your name","what's your name","who are you")
+    bye=("bye","goodbye","i am leaving","see you")
+    question=("what","how","which","Tell me about")
+    corona=("virus","coronavirus","covid-19","covid19","covid 19","corona","covid")
+    #covid=("covid-19","covid19","covid 19")
+    prevent=("protect","prevent","stop","avoid","precautions","precaution","prevention")
+    spread=("spread","spreading","cause","causes")
+    catch=("catch","catching","caught")
+    health=("are you","is your health")
+    welcome=("welcome","my pleasure")
+    maker=("who made you","who developed you","who is your owner","who coded you")
+    symptoms=("symptoms","symptom","sign","signs")
+
     if any(s in query for s in greetings):
         print ("Hey there!, I'm Dorona bot")
     elif any(s in query for s in maker):
